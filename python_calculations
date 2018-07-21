@@ -1,0 +1,34 @@
+import pandas as pd
+import dateutil
+import numpy
+from statistics import mode
+
+#read data from csv and creates a dataframe
+df=pd.read_csv('time trackers excel.csv')
+#converts Date colum from a string to a python datetime object
+df['Date']=pd.to_datetime(df['Date'])
+#changes the Index of the dataframe to DateTime.
+df.set_index(df['Date'], inplace=True)
+
+#sums the Duration_minutes column grouped by weeks
+f=df['Duration_minutes'].resample('W').sum()
+#counts the 'contribute in slack?' grouped by weeks
+c=df['Contribute in Slack?'].resample('W').count()
+
+#calculates mean, median, STDEV.
+mean=numpy.mean(f)
+median=numpy.median(f)
+STD=numpy.std(f,ddof=1)
+slack=numpy.mean(c)
+print('The weekly average of study time is: ' + str(mean) + ' minutes')
+print('The median of the weekly study times is: '+ str(median) + ' minutes')
+print('The standard deviation for the weekly study time is: ' + str(STD)+ ' minutes')
+print('The weekly average of slack contribution is: ' + str(slack))
+#the mode shows as an error. But it has the answer that no unique mode
+#print('The mode is: ' + str(mode(f)))
+
+#ref
+# http://blog.josephmisiti.com/group-by-datetimes-in-pandas
+# https://pandas.pydata.org/pandas-docs/version/0.21/generated/pandas.DataFrame.set_index.html
+# https://chrisalbon.com/python/data_wrangling/pandas_group_data_by_time/
+# https://stackoverflow.com/questions/7716331/calculating-arithmetic-mean-one-type-of-average-in-python
