@@ -1,0 +1,15 @@
+WITH t1 AS (
+ SELECT date, LEFT(date, STRPOS(date, '/')-1) AS month, SUBSTR(date,STRPOS(date, '/')+1,LENGTH(date)-7) AS day, RIGHT(date, 4) AS year,
+   CAST(CONCAT(RIGHT(date, 4), '-',LEFT(date, STRPOS(date, '/')-1), '-',SUBSTR(date,STRPOS(date, '/')+1,LENGTH(date)-7)) AS date) AS formatted_date, duration_minutes
+   FROM kf092010.time_trackers_excel),
+
+t2 AS (
+SELECT DATE_PART('week', formatted_date) AS weeks, SUM(duration_minutes) AS sum_of_time_spent_studying
+FROM t1
+GROUP BY 1
+ORDER BY 1)
+
+SELECT AVG(sum_of_time_spent_studying) AS average_miutes, STDDEV(sum_of_time_spent_studying) AS standard_dev_minutes
+FROM t2
+
+
