@@ -8,3 +8,9 @@ SELECT type_of_participation, AVG(duration_minutes) AS Avg_time_spent_participat
 FROM t1
 GROUP BY 1
 ORDER BY 1;
+
+
+Comments:
+Code developed by Kashfia Faruque
+The above SQL code calculates the average time spent in the Bertelsmann data science scholarship program for each type of participation.
+The dataset can be found at modeanalytics, named kf092010.time_trackers_excel.
