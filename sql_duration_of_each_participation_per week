@@ -11,7 +11,7 @@ ORDER BY 1;
 
 
 Comments:
-Code written by Kashfia Faruque
+Deeveloped by Kashfia Faruque
 The above SQL code sums the duration an individual spent weekly participating in the Bertelsmann data science scholarship program.
 The data was grouped by week and type of participation.
 The dataset can be found at modeanalytics, named kf092010.time_trackers_excel.
