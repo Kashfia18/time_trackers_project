@@ -9,7 +9,14 @@ FROM t1
 GROUP BY 1
 ORDER BY 1)
 
-SELECT AVG(sum_of_time_spent_studying) AS average_miutes, STDDEV(sum_of_time_spent_studying) AS standard_dev_minutes
-FROM t2
+SELECT AVG(sum_of_time_spent_studying) AS average_minutes, STDDEV(sum_of_time_spent_studying) AS standard_dev_minutes
+FROM t2;
 
+
+
+Comments:
+Code written by Kashfia Faruque
+The above SQL code calculates the average time and standard deviation in minutes that an individual spent weekly in the Bertelsmann
+data science scholarship program. The duration of study time was provided by date and was grouped by week to complete the weekly analysis.
+The dataset can be found at modeanalytics, named kf092010.time_trackers_excel.
 
