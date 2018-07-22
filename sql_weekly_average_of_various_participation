@@ -11,6 +11,6 @@ ORDER BY 1;
 
 
 Comments:
-Code developed by Kashfia Faruque
+Developed by Kashfia Faruque
 The above SQL code calculates the average time spent in the Bertelsmann data science scholarship program for each type of participation.
 The dataset can be found at modeanalytics, named kf092010.time_trackers_excel.
