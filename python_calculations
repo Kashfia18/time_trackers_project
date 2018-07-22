@@ -1,3 +1,9 @@
+#This code determines the average, median and standard deviation of the weekly time of an individual who participated in the 
+#time_trackers project ( The csv file link: https://drive.google.com/drive/folders/1eQZfgZ9f1GRfKJuPIb2tfIzkcLHEbdco?usp=sharing ).
+#The data was provided as each day and was grouped by per week for the analysis. So the sum of time spent was calculated for each week.
+#And then the mean, median and standard deviation was calculated from the weekly data.
+#Created by Kashfia Faruque
+
 import pandas as pd
 import dateutil
 import numpy
