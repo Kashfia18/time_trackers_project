@@ -2,7 +2,7 @@
 #time_trackers project ( The csv file link: https://drive.google.com/drive/folders/1eQZfgZ9f1GRfKJuPIb2tfIzkcLHEbdco?usp=sharing ).
 #The data was provided as each day and was grouped by per week for the analysis. So the sum of time spent was calculated for each week.
 #And then the mean, median and standard deviation was calculated from the weekly data.
-#Written by Kashfia Faruque
+#Developed by Kashfia Faruque
 
 import pandas as pd
 import dateutil
