@@ -8,3 +8,10 @@ SELECT DATE_PART('week', formatted_date) AS weeks, type_of_participation, SUM(du
 FROM t1
 GROUP BY 1,2
 ORDER BY 1;
+
+
+Comments:
+Code written by Kashfia Faruque
+The above SQL code sums the duration an individual spent weekly participating in the Bertelsmann data science scholarship program.
+The data was grouped by week and type of participation.
+The dataset can be found at modeanalytics, named kf092010.time_trackers_excel.
